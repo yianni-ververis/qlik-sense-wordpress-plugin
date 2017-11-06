@@ -71,6 +71,7 @@
 					</tr>
 				</table>
 				<?php submit_button(); ?>
+				<div><img src="<?php echo QLIK_SENSE_PLUGIN_PLUGIN_DIR . "/QlikLogo-RGB.png"?>" width="200"></div>
 			</form>
 		</div>
 <?php
