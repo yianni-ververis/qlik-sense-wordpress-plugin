@@ -23,4 +23,7 @@ require( ["js/qlik"], function ( qlik ) {
             viz.show(obj.id, { noInteraction: obj.noInteraction })
         })
     })
+    $('#qlik-sense-clear-selections').on('click', function() {
+        app.clearAll();
+    })
 } );

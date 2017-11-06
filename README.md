@@ -11,6 +11,7 @@
     - qvid: Is the object id as found in the "dev-hub/single-configurator"
     - height: The height of the visualization in pixels
     - nointeraction: Add this if you want to disable interactions. If you want the objects to have interaction, you can just omit this.
+- You can also add the clear selections button "[sense-object-clear-selections title="Clear Selections"]"
 ![Qlik Sense - Edit Post](/EditPost.png?raw=true "Qlik Sense - Edit Post")
 - The final page should look like this
 ![Qlik Sense - Hello World](/Helloworld.png?raw=true "Qlik Sense - Hello World")
