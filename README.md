@@ -5,5 +5,8 @@
 - Unzip the plugin into your plugins directory
 - Enable from the admin panel
 - Go to "Qlik Sense" settings and add the host, virtual proxy and the app id
-- then add the shortcode into your posts "[sense-object qvid="ZwjJQq" height="400" nointeraction="true"]"
 ![Qlik Sense - Settings](/Settings.png?raw=true "Qlik Sense - Settings")
+- then add the shortcode into your posts "[sense-object qvid="ZwjJQq" height="400" nointeraction="true"]"
+![Qlik Sense - Edit Post](/EditPost.png?raw=true "Qlik Sense - Edit Post")
+- The final page should look like this
+![Qlik Sense - Hello World](/Helloworld.png?raw=true "Qlik Sense - Hello World")
