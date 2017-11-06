@@ -1,7 +1,7 @@
 <?php
 	/*
 	Plugin Name: Qlik Sense
-	Plugin URI: 
+	Plugin URI: https://github.com/yianni-ververis/qlik-sense-wordpress-plugin
 	Description: a plugin to connect to Qlik Sense server and get the objects
 	Version: 0.1
 	Author: yianni.ververis@qlik.com
@@ -71,7 +71,7 @@
 					</tr>
 				</table>
 				<?php submit_button(); ?>
-				<div><img src="<?php echo QLIK_SENSE_PLUGIN_PLUGIN_DIR . "/QlikLogo-RGB.png"?>" width="200"></div>
+				<div><a href="https://www.qlik.com/us/"><img src="<?php echo QLIK_SENSE_PLUGIN_PLUGIN_DIR . "/QlikLogo-RGB.png"?>" width="200"></a></div>
 			</form>
 		</div>
 <?php
