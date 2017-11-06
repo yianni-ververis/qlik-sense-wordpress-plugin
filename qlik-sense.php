@@ -8,7 +8,7 @@
 		- Activate from the admin panel
 		- Go to "Qlik Sense" settings and add the host, virtual proxy and the app id
 		- then add the shortcode into your posts "[sense-object qvid="ZwjJQq" height="400" nointeraction="true"]"
-	Version: 0.1
+	Version: 1.1
 	Author: yianni.ververis@qlik.com
 	License: MIT
 	*/
