@@ -1,0 +1,10 @@
+{
+	"name": "yianni-ververis/qlik-sense-wordpress-plugin",
+	"type": "wordpress-plugin",
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "git@github.com:yianni-ververis/qlik-sense-wordpress-plugin.git"
+		}
+	]
+}
