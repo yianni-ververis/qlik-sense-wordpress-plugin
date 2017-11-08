@@ -18,14 +18,6 @@
     define( 'QLIK_SENSE_PLUGIN_MINIMUM_WP_VERSION', '4.0' );
     define( 'QLIK_SENSE_PLUGIN_PLUGIN_DIR', plugin_dir_url( __FILE__ ) );
 
-	// Create the options to be saved in the Database
-	add_action( 'admin_init', 'qlik_sense_plugin_settings' );	
-	function qlik_sense_plugin_settings() {
-		register_setting( 'qlik_sense-plugin-settings-group', 'qs_host' );
-		register_setting( 'qlik_sense-plugin-settings-group', 'qs_prefix' );
-		register_setting( 'qlik_sense-plugin-settings-group', 'qs_id' );
-	}
-
 	// Get the CSS and JS from Sense
     add_action( 'wp_enqueue_scripts', 'qlik_sense_enqueued_assets' );
     function qlik_sense_enqueued_assets() {
@@ -54,6 +46,14 @@
 		add_menu_page('Qlik Sense Plugin Settings', 'Qlik Sense', 'administrator', 'qlik_sense_plugin_settings', 'qlik_sense_plugin_settings_page', 'dashicons-admin-generic');
 	}
 	
+	// Create the options to be saved in the Database
+	add_action( 'admin_init', 'qlik_sense_plugin_settings' );	
+	function qlik_sense_plugin_settings() {
+		register_setting( 'qlik_sense-plugin-settings-group', 'qs_host' );
+		register_setting( 'qlik_sense-plugin-settings-group', 'qs_prefix' );
+		register_setting( 'qlik_sense-plugin-settings-group', 'qs_id' );
+	}
+
 	// Create the Admin Setting Page
 	function qlik_sense_plugin_settings_page() {
 ?>
@@ -95,5 +95,5 @@
 	function qlik_sense_object_clear_selections_func( $atts ) {
 		return "<button id=\"qlik-sense-clear-selections\">{$atts['title']}</button>";
 	}
-	add_shortcode( 'sense-object-clear-selections', 'qlik_sense_object_clear_selections_func' );
+	add_shortcode( 'qlik-sense-object-clear-selections', 'qlik_sense_object_clear_selections_func' );
 ?>
