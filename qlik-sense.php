@@ -64,21 +64,24 @@
 				<?php do_settings_sections( 'qlik_sense-plugin-settings-group' ); ?>
 				<table class="form-table">
 					<tr valign="top">
-						<th scope="row">Host</th>
-						<td><input type="text" name="qs_host" value="<?php echo esc_attr( get_option('qs_host') ); ?>" /></td>
+						<th scope="row">Host:</th>
+						<td><input type="text" name="qs_host" size="50" value="<?php echo esc_attr( get_option('qs_host') ); ?>" /></td>
 					</tr>					
 					<tr valign="top">
-					<th scope="row">Virtual Proxy (Prefix)</th>
-					<td><input type="text" name="qs_prefix" value="<?php echo esc_attr( get_option('qs_prefix') ); ?>" /></td>
-					</tr>
-					
+						<th scope="row">Virtual Proxy (Prefix):</th>
+						<td><input type="text" name="qs_prefix" size="5" value="<?php echo esc_attr( get_option('qs_prefix') ); ?>" /></td>
+					</tr>					
 					<tr valign="top">
-					<th scope="row">App ID</th>
-					<td><input type="text" name="qs_id" value="<?php echo esc_attr( get_option('qs_id') ); ?>" /></td>
+						<th scope="row">App ID:</th>
+						<td><input type="text" name="qs_id" size="50" value="<?php echo esc_attr( get_option('qs_id') ); ?>" /></td>
+					</tr>				
+					<tr valign="top">
+						<th scope="row">&nbsp;</th>
+						<td><?php submit_button(); ?></td>
 					</tr>
 				</table>
-				<?php submit_button(); ?>
-				<div><a href="https://www.qlik.com/us/"><img src="<?php echo QLIK_SENSE_PLUGIN_PLUGIN_DIR . "/QlikLogo-RGB.png"?>" width="200"></a></div>
+				
+				<div style="border-top:1px solid #ccc;padding-top:35px;"><a href="https://www.qlik.com/us/"><img src="<?php echo QLIK_SENSE_PLUGIN_PLUGIN_DIR . "/QlikLogo-RGB.png"?>" width="200"></a></div>
 			</form>
 		</div>
 <?php
