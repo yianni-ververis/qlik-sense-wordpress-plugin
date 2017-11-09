@@ -27,7 +27,8 @@ This is a simple plugin to connect to your Qlik Sense server and create a mashup
 
 = Cannot access the page =
 
-Make sure you whitelist the site's url in your Virtual Proxy
+- Make sure you whitelist the site's url in your Virtual Proxy
+- If the virtual proxy is "yianni" make sure you add in the settings "/yianni/"
 
 == Screenshots ==
 
@@ -36,6 +37,9 @@ Make sure you whitelist the site's url in your Virtual Proxy
 3. Add the shortcodes with the object ids to your post
 
 == Changelog ==
+
+= 1.0.5 =
+* Add virtual proxy to the css and js resources.
 
 = 1.0.4 =
 * Fixin compatability issues with wordpress.org.

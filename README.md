@@ -30,6 +30,13 @@
 
 ![Qlik Sense - Hello World](/Helloworld.png?raw=true "Qlik Sense - Hello World")
 
+#### requently Asked Questions
+
+##### Cannot access the page
+
+- Make sure you whitelist the site's url in your Virtual Proxy
+- If the virtual proxy is "yianni" make sure you add in the settings "/yianni/"
+
 #### Changelog
 
 ##### 1.0.4
