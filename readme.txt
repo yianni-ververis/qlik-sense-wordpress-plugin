@@ -13,7 +13,7 @@ This is a simple plugin to connect to your Qlik Sense server and create a mashup
 
 == Installation ==
 
-1. Upload the plugin files to the `/wp-content/plugins/qlik-sense` directory, or install the plugin through the WordPress plugins screen directly.
+1. Upload the plugin files to the `/wp-content/plugins/qlik-sense` directory, or install the plugin through the WordPress plugins screen directly by searching for "Qlik".
 2. Activate the plugin through the 'Plugins' screen in WordPress
 3. Go to "Qlik Sense" settings and add the host, virtual proxy and the app id
 - then add the shortcode into your posts "[qlik-sense-object qvid="ZwjJQq" height="400" nointeraction="true"]"
@@ -21,6 +21,19 @@ This is a simple plugin to connect to your Qlik Sense server and create a mashup
     - height: The height of the visualization in pixels
     - nointeraction: Add this if you want to disable interactions. If you want the objects to have interaction, you can just omit this.
 - You can also add the clear selections button "[qlik-sense-object-clear-selections title="Clear Selections"]"
+
+
+== Frequently Asked Questions ==
+
+= Cannot access the page =
+
+Make sure you whitelist the site's url in your Virtual Proxy
+
+== Screenshots ==
+
+1. Activate plugin
+2. Settings Page
+3. Add the shortcodes with the object ids to your post
 
 == Changelog ==
 
