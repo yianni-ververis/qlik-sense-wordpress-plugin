@@ -7,7 +7,7 @@
 == Installation ==
 
 1. Upload the plugin files to the `/wp-content/plugins/qlik-sense` directory, or install the plugin through the WordPress plugins screen directly.
-
+![Wordpress Plugins Search](/install.png?raw=true "Wordpress Plugins Search")
 ![Wordpress Plugins Directory](/PluginsDirectory.png?raw=true "Wordpress Plugins Directory")
 
 2. Activate the plugin through the 'Plugins' screen in WordPress
