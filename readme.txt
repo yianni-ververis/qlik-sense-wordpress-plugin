@@ -49,3 +49,5 @@ This is a simple plugin to connect to your Qlik Sense server and create a mashup
 
 = 1.0.2 =
 * Changed the option names to start with qs_.
+
+https://community.qlik.com/blogs/qlikviewdesignblog/2017/11/10/qlik-sense-wordpress-plugin
