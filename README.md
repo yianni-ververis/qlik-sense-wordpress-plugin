@@ -7,10 +7,10 @@
 == Installation ==
 
 1. Upload the plugin files to the `/wp-content/plugins/qlik-sense` directory, or install the plugin through the WordPress plugins screen directly by searching for "Qlik".
-![Wordpress Plugins Search](/install.png?raw=true "Wordpress Plugins Search")
-![Wordpress Plugins Directory](/PluginsDirectory.png?raw=true "Wordpress Plugins Directory")
 
-2. Activate the plugin through the 'Plugins' screen in WordPress
+![Wordpress Plugins Search](/install.png?raw=true "Wordpress Plugins Search")
+
+2. Then click on "Activate"
 
 ![Qlik Sense - Activate](/Activate.png?raw=true "Qlik Sense - Activate")
 
@@ -38,6 +38,9 @@
 - If the virtual proxy is "yianni" make sure you add in the settings "/yianni/"
 
 #### Changelog
+
+##### 1.0.5
+* Add virtual proxy to the css and js resources.
 
 ##### 1.0.4
 * Fixin compatability issues with wordpress.org.
