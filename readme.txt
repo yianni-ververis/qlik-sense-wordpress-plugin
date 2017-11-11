@@ -15,7 +15,7 @@ This is a simple plugin to connect to your Qlik Sense server and create a mashup
 
 1. Upload the plugin files to the `/wp-content/plugins/qlik-sense` directory, or install the plugin through the WordPress plugins screen directly by searching for "Qlik".
 2. Then click on "Activate"
-3. Go to "Qlik Sense" settings and add the host, virtual proxy and the app id
+3. Go to "Qlik Sense" settings and add the host (DNS only), virtual proxy and the app id
 - then add the shortcode into your posts "[qlik-sense-object qvid="ZwjJQq" height="400" nointeraction="true"]"
     - qvid: Is the object id as found in the "dev-hub/single-configurator"
     - height: The height of the visualization in pixels
@@ -27,6 +27,7 @@ This is a simple plugin to connect to your Qlik Sense server and create a mashup
 
 = Cannot access the page =
 
+- In the host you only add the Qlik Sense server DNS not the full url like "myserver.com", not "https://myserver.com/single"
 - Make sure you whitelist the site's url in your Virtual Proxy
 - If the virtual proxy is "yianni" make sure you add in the settings "/yianni/"
 

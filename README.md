@@ -14,7 +14,7 @@
 
 ![Qlik Sense - Activate](/Activate.png?raw=true "Qlik Sense - Activate")
 
-3. Go to "Qlik Sense" settings and add the host, virtual proxy and the app id
+3. Go to "Qlik Sense" settings and add the host (DNS only), virtual proxy and the app id
 
 ![Qlik Sense - Settings](/Settings.png?raw=true "Qlik Sense - Settings")
 
@@ -34,6 +34,7 @@
 
 ##### Cannot access the page
 
+- In the host you only add the Qlik Sense server DNS not the full url like "myserver.com", not "https://myserver.com/single"
 - Make sure you whitelist the site's url in your Virtual Proxy
 - If the virtual proxy is "yianni" make sure you add in the settings "/yianni/"
 
