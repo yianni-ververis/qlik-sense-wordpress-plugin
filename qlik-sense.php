@@ -9,12 +9,12 @@
 		- Go to "Qlik Sense" settings and add the host, virtual proxy and the app id
 		- then add the shortcode into your posts "[sense-object qvid="ZwjJQq" height="400" nointeraction="true"]"
 		- YOu can also add the Clear Selections button [sense-object-clear-selections title="Clear Selections"]
-	Version: 1.0.5
+	Version: 1.1.1
 	Author: yianni.ververis@qlik.com
 	License: MIT
 	*/
 
-    define( 'QLIK_SENSE_PLUGIN_VERSION', '1.0.5' );
+    define( 'QLIK_SENSE_PLUGIN_VERSION', '1.1.1' );
     define( 'QLIK_SENSE_PLUGIN_MINIMUM_WP_VERSION', '4.0' );
     define( 'QLIK_SENSE_PLUGIN_PLUGIN_DIR', plugin_dir_url( __FILE__ ) );
 
@@ -31,9 +31,11 @@
 
 		// Localize the script with new data
 		$translation_array = array(	
+			'version'		=> QLIK_SENSE_PLUGIN_VERSION,
 			'qs_host'		=> esc_attr( get_option('qs_host') ),
 			'qs_prefix'		=> esc_attr( get_option('qs_prefix') ),
 			'qs_id'			=> esc_attr( get_option('qs_id') ),
+			'qs_id2'		=> esc_attr( get_option('qs_id2') ),
 		);
 		wp_localize_script( 'qlik-sense-js', 'vars', $translation_array );
 
@@ -52,6 +54,7 @@
 		register_setting( 'qlik_sense-plugin-settings-group', 'qs_host' );
 		register_setting( 'qlik_sense-plugin-settings-group', 'qs_prefix' );
 		register_setting( 'qlik_sense-plugin-settings-group', 'qs_id' );
+		register_setting( 'qlik_sense-plugin-settings-group', 'qs_id2' );
 	}
 
 	// Create the Admin Setting Page
@@ -74,6 +77,10 @@
 					<tr valign="top">
 						<th scope="row">App ID:</th>
 						<td><input type="text" name="qs_id" size="50" value="<?php echo esc_attr( get_option('qs_id') ); ?>" /></td>
+					</tr>					
+					<tr valign="top">
+						<th scope="row">App2 ID:</th>
+						<td><input type="text" name="qs_id2" size="50" value="<?php echo esc_attr( get_option('qs_id2') ); ?>" /></td>
 					</tr>				
 					<tr valign="top">
 						<th scope="row">&nbsp;</th>
@@ -88,15 +95,17 @@
 	}
 
 	// Create the Html Snippet for use inside the posts/pages
-	// [sense-object qvid="ZwjJQq" height="400" nointeraction="true"]
+	// [sense-object qvid="ZwjJQq" height="400" nointeraction="true" app2="true"]
 	function qlik_sense_object_func( $atts ) {
-		return "<div id=\"{$atts['qvid']}\" data-qvid=\"{$atts['qvid']}\" data-nointeraction=\"{$atts['nointeraction']}\" class=\"wp-qs\" style=\"height:{$atts['height']}px\"></div>";
+		$app = ($atts['app2']) ? 'data-app2="true"' : null;
+		return "<div id=\"qs_{$atts['id']}\" data-id=\"qs_{$atts['id']}\" data-qvid=\"{$atts['qvid']}\" data-nointeraction=\"{$atts['nointeraction']}\" class=\"wp-qs\" ${app} style=\"height:{$atts['height']}px\"></div>";
 	}
 	add_shortcode( 'qlik-sense-object', 'qlik_sense_object_func' );
 	
 	// [sense-object-clear-selections title="Clear Selections"]
 	function qlik_sense_object_clear_selections_func( $atts ) {
-		return "<button id=\"qlik-sense-clear-selections\">{$atts['title']}</button>";
+		$app = ($atts['app2']) ? '-app2' : null;
+		return "<button id=\"qlik-sense-clear-selections${app}\">{$atts['title']}</button>";
 	}
 	add_shortcode( 'qlik-sense-object-clear-selections', 'qlik_sense_object_clear_selections_func' );
 ?>
