@@ -13,7 +13,7 @@
 
 ![Qlik Sense - Activate](/Activate.png?raw=true "Qlik Sense - Activate")
 
-3. Go to "Qlik Sense" settings and add the host, virtual proxy and the app id
+3. Go to "Qlik Sense" settings and add the host, virtual proxy and the app id. If you are planning on using a second app, then add the second app id in "App2 ID".
 
 ![Qlik Sense - Settings](/Settings.png?raw=true "Qlik Sense - Settings")
 
