@@ -42,6 +42,9 @@ This is a simple plugin to connect to your Qlik Sense server and create a mashup
 
 == Changelog ==
 
+= 1.1.3 =
+* Hide the alert window on qlik error
+
 = 1.1.2 =
 * Changed the order of the loading for css and js. Put them to load first so they do not break any theme
 

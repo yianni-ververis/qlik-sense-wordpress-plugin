@@ -13,7 +13,7 @@ require.config( {
 
 require( ["js/qlik"], function ( qlik ) {
     qlik.setOnError( function ( error ) {
-        alert( error.message );
+        console.log( error.message );
     } );
     var app = qlik.openApp(config.id, config);
     if (config.id2) {
