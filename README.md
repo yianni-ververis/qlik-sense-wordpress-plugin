@@ -7,15 +7,15 @@
 == Installation ==
 
 1. Upload the plugin files (You or the Your Web Site Sys Admin) to the `/wp-content/plugins/qlik-sense` directory, or install the plugin through the WordPress plugins screen directly by searching for "Qlik".
-![Wordpress Plugins Search](/install.png?raw=true "Wordpress Plugins Search")
+![Wordpress Plugins Search](/assests/install.png?raw=true "Wordpress Plugins Search")
 
 2. Activate the plugin (You or a Web Dev) through the 'Plugins' screen in WordPress
 
-![Qlik Sense - Activate](/Activate.png?raw=true "Qlik Sense - Activate")
+![Qlik Sense - Activate](/assests/Activate.png?raw=true "Qlik Sense - Activate")
 
 3. Go to "Qlik Sense" settings and add the host, virtual proxy and the app id. If you are planning on using a second app, then add the second app id in "App2 ID". 
 
-![Qlik Sense - Settings](/Settings.png?raw=true "Qlik Sense - Settings")
+![Qlik Sense - Settings](/assests/Settings.png?raw=true "Qlik Sense - Settings")
 
 - then add the shortcode into your posts "[qlik-sense-object id="page1-obj2" qvid="nvqpV" height="400" app2="true"]"
     - id: is the unique div id. This is needed especially when you want to display the same object in 2 different instances
@@ -25,12 +25,12 @@
     - app2: Add this if your object is coming from the second app that you have specified in the settings
 - You can also add the clear selections button "[qlik-sense-object-clear-selections title="Clear Selections"]"
 
-![Qlik Sense - Edit Post](/EditPost.png?raw=true "Qlik Sense - Edit Post")
+![Qlik Sense - Edit Post](/assests/EditPost.png?raw=true "Qlik Sense - Edit Post")
 
 - The final page should look like this. Notice that in the page with app 1 objects I have included an object from app2 and they both display when all pages are loaded on the same screen
 
-![Qlik Sense - App 2](/Helloworld.png?raw=true "Qlik Sense - App 2")
-![Qlik Sense - App 1](/Helloworld2.png?raw=true "Qlik Sense - App 1")
+![Qlik Sense - App 2](/assests/Helloworld.png?raw=true "Qlik Sense - App 2")
+![Qlik Sense - App 1](/assests/Helloworld2.png?raw=true "Qlik Sense - App 1")
 
 #### requently Asked Questions
 
