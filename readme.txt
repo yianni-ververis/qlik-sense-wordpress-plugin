@@ -42,6 +42,9 @@ This is a simple plugin to connect to your Qlik Sense server and create a mashup
 
 == Changelog ==
 
+= 1.1.2 =
+* Changed the order of the loading for css and js. Put them to load first so they do not break any theme
+
 = 1.1.1 =
 * Added unique id instead of using the qvid so we can display multiple instances of the same object
 
