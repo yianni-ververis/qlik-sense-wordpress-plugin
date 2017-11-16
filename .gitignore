@@ -1,6 +1,7 @@
 # Project Specific #
 ###################
 qlik-sense/
+node_modules/
 
 # Logs #
 ###################
