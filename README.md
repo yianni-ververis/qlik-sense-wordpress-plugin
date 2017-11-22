@@ -43,6 +43,9 @@
 
 #### Changelog
 
+##### 1.1.4
+* Changed the order of loading requirejs.
+
 ##### 1.1.3
 * Hide the alert window on qlik error
 
