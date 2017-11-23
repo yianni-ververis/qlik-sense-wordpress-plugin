@@ -43,6 +43,9 @@
 
 #### Changelog
 
+##### 1.1.5
+* Changed the order of loading css.
+
 ##### 1.1.4
 * Changed the order of loading requirejs.
 

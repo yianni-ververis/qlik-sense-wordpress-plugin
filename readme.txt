@@ -42,6 +42,9 @@ This is a simple plugin to connect to your Qlik Sense server and create a mashup
 
 == Changelog ==
 
+= 1.1.5 =
+* Changed the order of loading css.
+
 = 1.1.4 =
 * Changed the order of loading requirejs.
 
