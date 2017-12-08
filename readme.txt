@@ -22,6 +22,7 @@ This is a simple plugin to connect to your Qlik Sense server and create a mashup
     - height: The height of the visualization in pixels
     - nointeraction: Add this if you want to disable interactions. If you want the objects to have interaction, you can just omit this.
     - app2: Add this if your object is coming from the second app that you have specified in the settings
+    - appid (optional): The variable qs_appid is added to store the value from the custom field appid. The custom field is used to be able to use a separate app for each page.
 - You can also add the clear selections button "[qlik-sense-object-clear-selections title="Clear Selections"]"
 
 
@@ -41,6 +42,9 @@ This is a simple plugin to connect to your Qlik Sense server and create a mashup
 3. Add the shortcodes with the object ids to your post
 
 == Changelog ==
+
+= 1.1.6 =
+* The variable qs_appid is added to store the value from the custom field appid. The custom field is used to be able to use a separate app for each page.
 
 = 1.1.5 =
 * Changed the order of loading css.
