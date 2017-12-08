@@ -40,6 +40,7 @@
 			'qs_prefix'		=> esc_attr( get_option('qs_prefix') ),
 			'qs_id'			=> esc_attr( get_option('qs_id') ),
 			'qs_id2'		=> esc_attr( get_option('qs_id2') ),
+			'qs_appid'		=> esc_attr( get_post_meta(get_the_ID(), 'appid', true) )						
 		);
 		wp_localize_script( 'qlik-sense-js', 'vars', $translation_array );
 
