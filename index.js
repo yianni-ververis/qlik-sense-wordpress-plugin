@@ -15,7 +15,14 @@ require( ["js/qlik"], function ( qlik ) {
     qlik.setOnError( function ( error ) {
         console.log( error.message );
     } );
-    var app = qlik.openApp(config.id, config);
+
+    // use appid from custom field if available, fall back to the id from options page
+    if (config.qsapp) {
+	var app = qlik.openApp(config.qsapp, config);
+    } else {
+	var app = qlik.openApp(config.id, config);
+    }
+	
     if (config.id2) {
         var app2 = qlik.openApp(config.id2, config);
     }
