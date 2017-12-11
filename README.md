@@ -15,7 +15,7 @@
 
 3. Go to "Qlik Sense" settings and add the host, virtual proxy and the app id. If you are planning on using a second app, then add the second app id in "App2 ID". 
 
-![Qlik Sense - Settings](/assets/Settings.png?raw=true "Qlik Sense - Settings")
+![Qlik Sense - Settings](/assets/Settings-server.png?raw=true "Qlik Sense - Settings")
 
 - If you want to setup for Qlik Sense Desktop
 
