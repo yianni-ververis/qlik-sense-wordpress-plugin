@@ -30,6 +30,7 @@ This is a simple plugin to connect to your Qlik Sense server and create a mashup
 
 = Cannot access the page =
 
+- For those that are upgrading to 1.1.7, make sure you set the settings page again with the port and if its over https
 - Make sure you or a Qlik Sys Admin whitelists the site's url in your Virtual Proxy
 - If the virtual proxy is "yianni" make sure you add in the settings "/yianni/"
 - There are known issues with wp's cache plugins.
@@ -42,6 +43,9 @@ This is a simple plugin to connect to your Qlik Sense server and create a mashup
 3. Add the shortcodes with the object ids to your post
 
 == Changelog ==
+
+= 1.1.7 =
+* Add "Port" and "Secure" in the options so we can connect to Qlik Sense Desktop
 
 = 1.1.6 =
 * The variable qs_appid is added to store the value from the custom field appid. The custom field is used to be able to use a separate app for each page.

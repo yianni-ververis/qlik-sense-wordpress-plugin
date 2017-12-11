@@ -2,13 +2,13 @@ var config = {
     version: vars.version,
     host: vars.qs_host,
     prefix: vars.qs_prefix,
-    port: 443,
-    isSecure: true,
+    port: (vars.qs_port) ? parseInt(vars.qs_port) : 443,
+    isSecure: (vars.qs_secure && parseInt(vars.qs_secure)==1) ? true : false,
     id: vars.qs_id,
     id2: (vars.qs_id2) ? vars.qs_id2 : null
 };
 require.config( {
-	baseUrl: ( config.isSecure ? "https://" : "http://" ) + config.host + (config.port ? ":" + config.port: "") + config.prefix + "resources"
+	baseUrl:  ( config.isSecure ? "https://" : "http://" ) + config.host + (config.port ? ":" + config.port: "") + config.prefix + "resources"
 } );
 
 require( ["js/qlik"], function ( qlik ) {

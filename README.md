@@ -17,6 +17,10 @@
 
 ![Qlik Sense - Settings](/assets/Settings.png?raw=true "Qlik Sense - Settings")
 
+- If you want to setup for Qlik Sense Desktop
+
+![Qlik Sense - Settings](/assets/Settings-local.png?raw=true "Qlik Sense - Settings")
+
 - then add the shortcode into your posts "[qlik-sense-object id="page1-obj2" qvid="nvqpV" height="400" app2="true"]"
     - id: is the unique div id. This is needed especially when you want to display the same object in 2 different instances
     - qvid: Is the object id as found in the "dev-hub/single-configurator"
@@ -37,12 +41,16 @@
 
 ##### Cannot access the page
 
+- For those that are upgrading to 1.1.7, make sure you set the settings page again with the port and if its over https
 - Make sure you or a Qlik Sys Admin whitelists the site's url in your Virtual Proxy
 - If the virtual proxy is "yianni" make sure you add in the settings "/yianni/"
 - There are known issues with wp's cache plugins.
 - You may experience issues if any other plugin is using requirejs.
 
 #### Changelog
+
+##### 1.1.7
+* Add "Port" and "Secure" in the options so we can connect to Qlik Sense Desktop
 
 ##### 1.1.6
 * The variable qs_appid is added to store the value from the custom field appid. The custom field is used to be able to use a separate app for each page.
