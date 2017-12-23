@@ -9,12 +9,12 @@
 		- Go to "Qlik Sense" settings and add the host, virtual proxy and the app id
 		- then add the shortcode into your posts "[sense-object qvid="ZwjJQq" height="400" nointeraction="true"]"
 		- YOu can also add the Clear Selections button [sense-object-clear-selections title="Clear Selections"]
-	Version: 1.1.7
+	Version: 1.2.0
 	Author: yianni.ververis@qlik.com
 	License: MIT
 	*/
 
-    define( 'QLIK_SENSE_PLUGIN_VERSION', '1.1.7' );
+    define( 'QLIK_SENSE_PLUGIN_VERSION', '1.2.0' );
     define( 'QLIK_SENSE_PLUGIN_MINIMUM_WP_VERSION', '4.0' );
     define( 'QLIK_SENSE_PLUGIN_PLUGIN_DIR', plugin_dir_url( __FILE__ ) );
 
@@ -131,17 +131,23 @@
 	}
 
 	// Create the Html Snippet for use inside the posts/pages
-	// [sense-object qvid="ZwjJQq" height="400" nointeraction="true" app2="true" appid=""]
+	// [qlik-sense-object qvid="ZwjJQq" height="400" nointeraction="true" app2="true" appid=""]
 	function qlik_sense_object_func( $atts ) {
 		$app = ($atts['app2']) ? 'data-app2="true"' : null;
 		return "<div id=\"qs_{$atts['id']}\" data-id=\"qs_{$atts['id']}\" data-qvid=\"{$atts['qvid']}\" data-nointeraction=\"{$atts['nointeraction']}\" class=\"wp-qs\" ${app} style=\"height:{$atts['height']}px\"></div>";
 	}
 	add_shortcode( 'qlik-sense-object', 'qlik_sense_object_func' );
 	
-	// [sense-object-clear-selections title="Clear Selections"]
+	// [qlik-sense-object-clear-selections title="Clear Selections"]
 	function qlik_sense_object_clear_selections_func( $atts ) {
 		$app = ($atts['app2']) ? '-app2' : null;
 		return "<button id=\"qlik-sense-clear-selections${app}\">{$atts['title']}</button>";
 	}
 	add_shortcode( 'qlik-sense-object-clear-selections', 'qlik_sense_object_clear_selections_func' );
+
+	// [qlik-sense-selection-toolbar]
+	function qlik_sense_selection_toolbar_func() {
+		return "<div class=\"qvobject fifty\" data-qvid=\"CurrentSelections\" id=\"CurrentSelections\"></div>";
+	}
+	add_shortcode( 'qlik-sense-selection-toolbar', 'qlik_sense_selection_toolbar_func' );
 ?>

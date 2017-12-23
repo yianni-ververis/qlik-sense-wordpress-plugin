@@ -45,6 +45,7 @@ require( ["js/qlik"], function ( qlik ) {
             })
         }
     })
+    app.getObject('CurrentSelections', 'CurrentSelections');
     $('#qlik-sense-clear-selections').on('click', function() {
         app.clearAll();
     })
