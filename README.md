@@ -1,8 +1,8 @@
 # Qlik Sense Wordpress Plugin
+[![version](http://img.shields.io/badge/version-1.2.0-brightgreen.svg?style=plastic)]()
 
 #### This is a simple plugin to connect to your Qlik Sense server and create a mashup by getting the object with a shortcode inside a post or page within the admin panel
 
-[![version](http://img.shields.io/badge/version-1.2.0-brightgreen.svg?style=plastic)]()
 
 ##### This is created with Wordpress 4.8.3 #####
 
