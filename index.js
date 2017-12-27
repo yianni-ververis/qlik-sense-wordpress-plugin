@@ -5,7 +5,8 @@ var config = {
     port: (vars.qs_port) ? parseInt(vars.qs_port) : 443,
     isSecure: (vars.qs_secure && parseInt(vars.qs_secure)==1) ? true : false,
     id: vars.qs_id,
-    id2: (vars.qs_id2) ? vars.qs_id2 : null
+    id2: (vars.qs_id2) ? vars.qs_id2 : null,
+    qsapp: vars.qs_appid
 };
 require.config( {
 	baseUrl:  ( config.isSecure ? "https://" : "http://" ) + config.host + (config.port ? ":" + config.port: "") + config.prefix + "resources"
