@@ -9,12 +9,12 @@
 		- Go to "Qlik Sense" settings and add the host, virtual proxy and the app id
 		- then add the shortcode into your posts "[sense-object qvid="ZwjJQq" height="400" nointeraction="true"]"
 		- YOu can also add the Clear Selections button [sense-object-clear-selections title="Clear Selections"]
-	Version: 1.2.0
+	Version: 1.2.1
 	Author: yianni.ververis@qlik.com
 	License: MIT
 	*/
 
-    define( 'QLIK_SENSE_PLUGIN_VERSION', '1.2.0' );
+    define( 'QLIK_SENSE_PLUGIN_VERSION', '1.2.1' );
     define( 'QLIK_SENSE_PLUGIN_MINIMUM_WP_VERSION', '4.0' );
     define( 'QLIK_SENSE_PLUGIN_PLUGIN_DIR', plugin_dir_url( __FILE__ ) );
 

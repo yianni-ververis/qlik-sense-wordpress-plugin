@@ -1,5 +1,5 @@
 # Qlik Sense Wordpress Plugin
-[![version](http://img.shields.io/badge/version-1.2.0-brightgreen.svg?style=plastic)]()
+[![version](http://img.shields.io/badge/version-1.2.1-brightgreen.svg?style=plastic)]()
 
 #### This is a simple plugin to connect to your Qlik Sense server and create a mashup by getting the object with a shortcode inside a post or page within the admin panel
 
@@ -32,6 +32,7 @@
     - appid (optional): The variable qs_appid is added to store the value from the custom field appid. The custom field is used to be able to use a separate app for each page.
 - You can also add the clear selections button "[qlik-sense-object-clear-selections title="Clear Selections"]"
 - [qlik-sense-selection-toolbar] for Qlik Sense Selection Toolbar
+- For Selection Toolbar for app2, just add app2="true" [qlik-sense-selection-toolbar app2="true"]
 
 ![Qlik Sense - Edit Post](/assets/EditPost.png?raw=true "Qlik Sense - Edit Post")
 
@@ -55,6 +56,9 @@
 * If you are using it, please send me an email to add your mashup here (yianni.ververis@qlik.com)
 
 ### Changelog ###
+
+##### 1.2.1
+* Add Selection Toolbar for 2nd app (Thnx to @nixnut)
 
 ##### 1.2.0
 * Add Qlik Sense's Selection Toolbar.
