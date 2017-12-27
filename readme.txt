@@ -39,10 +39,19 @@ This is a simple plugin to connect to your Qlik Sense server and create a mashup
 == Screenshots ==
 
 1. Activate plugin
-2. Settings Page
+2. Settings Page - Server
+2. Settings Page - Local
 3. Add the shortcodes with the object ids to your post
+4. Preview
+5. Preview
+
+== Examples of use ==
+* If you are using it, please send me an email to add your mashup here (yianni.ververis@qlik.com)
 
 == Changelog ==
+
+= 1.2.0 =
+* Add Qlik Sense's Selection Toolbar.
 
 = 1.1.7 =
 * Add "Port" and "Secure" in the options so we can connect to Qlik Sense Desktop

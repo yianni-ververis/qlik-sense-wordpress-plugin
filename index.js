@@ -46,10 +46,10 @@ require( ["js/qlik"], function ( qlik ) {
             })
         }
     })
-
+  
     app.getObject('CurrentSelections', 'CurrentSelections-app1');	
     if (config.id2) {
-	app2.getObject('CurrentSelections', 'CurrentSelections-app2');    
+	      app2.getObject('CurrentSelections', 'CurrentSelections-app2');    
     } 	
 	
     $('[id^=qlik-sense-clear-selections-app1]').on('click', function() {
