@@ -49,7 +49,7 @@ require( ["js/qlik"], function ( qlik ) {
     $('[id^=qlik-sense-clear-selections-app1]').on('click', function() {
         app.clearAll();
     })
-    $('#qlik-sense-clear-selections-app2').on('click', function() {
+    $('[id^=qlik-sense-clear-selections-app2]').on('click', function() {
         app2.clearAll();
     })
     console.log('%cQlik Sense Wordpress Plugin: ', 'color: red', 'Version ' + config.version);
