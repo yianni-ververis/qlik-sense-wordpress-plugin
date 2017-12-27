@@ -144,4 +144,11 @@
 		return "<button id=\"qlik-sense-clear-selections${app}-{$atts['id']}\">{$atts['title']}</button>";
 	}
 	add_shortcode( 'qlik-sense-object-clear-selections', 'qlik_sense_object_clear_selections_func' );
+
+	// [qlik-sense-selection-toolbar]
+	function qlik_sense_selection_toolbar_func() {
+		$app = ($atts['app2']) ? '-app2' : '-app1';
+		return "<div class=\"qvobject fifty\" data-qvid=\"CurrentSelections\" id=\"CurrentSelections${app}\"></div>";
+	}
+	add_shortcode( 'qlik-sense-selection-toolbar', 'qlik_sense_selection_toolbar_func' );
 ?>
