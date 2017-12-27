@@ -46,7 +46,7 @@ require( ["js/qlik"], function ( qlik ) {
             })
         }
     })
-    $('#qlik-sense-clear-selections').on('click', function() {
+    $('[id^=qlik-sense-clear-selections-app1]').on('click', function() {
         app.clearAll();
     })
     $('#qlik-sense-clear-selections-app2').on('click', function() {
