@@ -140,8 +140,8 @@
 	
 	// [sense-object-clear-selections title="Clear Selections"]
 	function qlik_sense_object_clear_selections_func( $atts ) {
-		$app = ($atts['app2']) ? '-app2' : null;
-		return "<button id=\"qlik-sense-clear-selections${app}\">{$atts['title']}</button>";
+		$app = ($atts['app2']) ? '-app2' : '-app1';
+		return "<button id=\"qlik-sense-clear-selections${app}-{$atts['id']}\">{$atts['title']}</button>";
 	}
 	add_shortcode( 'qlik-sense-object-clear-selections', 'qlik_sense_object_clear_selections_func' );
 ?>
