@@ -5,7 +5,8 @@ var config = {
     port: (vars.qs_port) ? parseInt(vars.qs_port) : 443,
     isSecure: (vars.qs_secure && parseInt(vars.qs_secure)==1) ? true : false,
     id: vars.qs_id,
-    id2: (vars.qs_id2) ? vars.qs_id2 : null
+    id2: (vars.qs_id2) ? vars.qs_id2 : null,
+    qsapp: vars.qs_appid
 };
 require.config( {
 	baseUrl:  ( config.isSecure ? "https://" : "http://" ) + config.host + (config.port ? ":" + config.port: "") + config.prefix + "resources"
@@ -45,11 +46,16 @@ require( ["js/qlik"], function ( qlik ) {
             })
         }
     })
-    app.getObject('CurrentSelections', 'CurrentSelections');
-    $('#qlik-sense-clear-selections').on('click', function() {
+  
+    app.getObject('CurrentSelections', 'CurrentSelections-app1');	
+    if (config.id2) {
+	      app2.getObject('CurrentSelections', 'CurrentSelections-app2');    
+    } 	
+	
+    $('[id^=qlik-sense-clear-selections-app1]').on('click', function() {
         app.clearAll();
     })
-    $('#qlik-sense-clear-selections-app2').on('click', function() {
+    $('[id^=qlik-sense-clear-selections-app2]').on('click', function() {
         app2.clearAll();
     })
     console.log('%cQlik Sense Wordpress Plugin: ', 'color: red', 'Version ' + config.version);
