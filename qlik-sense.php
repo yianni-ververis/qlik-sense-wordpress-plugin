@@ -13,6 +13,7 @@
 	Author: yianni.ververis@qlik.com
 	License: MIT
 	*/
+	defined('ABSPATH') or die("No script kiddies please!"); //Block direct access to this php file
 
     define( 'QLIK_SENSE_PLUGIN_VERSION', '1.2.1' );
     define( 'QLIK_SENSE_PLUGIN_MINIMUM_WP_VERSION', '4.0' );
@@ -219,7 +220,7 @@
 	}
 	add_action("admin_print_footer_scripts", "qlik_sense_clear_button_script");
 	
-	// qlik sense selections toolbar
+	//  qlik sense selections toolbar
 	function qlik_sense_toolbar_button_script() {
 			if(wp_script_is("quicktags")) {
 					?>
