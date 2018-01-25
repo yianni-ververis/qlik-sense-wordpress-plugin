@@ -1,5 +1,7 @@
 # Qlik Sense Wordpress Plugin
-[![version](http://img.shields.io/badge/version-1.2.1-brightgreen.svg?style=plastic)]()
+[![WordPress plugin](https://img.shields.io/wordpress/plugin/v/qlik-sense.svg)](https://wordpress.org/plugins/qlik-sense/)
+[![WordPress plugin](https://img.shields.io/wordpress/plugin/dt/qlik-sense.svg)](https://wordpress.org/plugins/qlik-sense/)
+[![WordPress plugin rating](https://img.shields.io/wordpress/plugin/r/qlik-sense.svg)](https://wordpress.org/plugins/qlik-sense/)
 
 #### This is a simple plugin to connect to your Qlik Sense server and create a mashup by getting the object with a shortcode inside a post or page within the admin panel
 
@@ -60,10 +62,13 @@
 
 ### Changelog ###
 
-##### 1.2.1
+##### 1.2.2 #####
+* Add buttons to WordPress text editor to make adding shortcodes easier (Thnx to Matt Fryer)
+
+##### 1.2.1 #####
 * Add Selection Toolbar for 2nd app (Thnx to @nixnut)
 
-##### 1.2.0
+##### 1.2.0 #####
 * Add Qlik Sense's Selection Toolbar.
 
 ##### 1.1.7 #####
