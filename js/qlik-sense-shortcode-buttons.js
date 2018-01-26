@@ -2,13 +2,10 @@
   tinymce.create('tinymce.plugins.qlik_sense_buttons', {
     init : function(ed, url) {
 			ed.addButton('qlik-sense-menu-button', {
-				type: 'splitbutton',
+				type: 'menubutton',
 				text: 'Sense',
 				icon: true,
 				image : url+'/qlik.png',
-				onclick: function() {
-					// Do nothing
-				},
 				menu: [{
 					text: 'Insert Object',
 					icon: true,
