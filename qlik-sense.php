@@ -254,7 +254,7 @@
 	
 	// Add the buttons to the TinyMCE so that the shortcodes can be added via the visual page/post editor
 	function register_qlik_sense_buttons( $buttons ) {
-		 array_push( $buttons, "qlik-sense-menu-button" );//"qlik_sense_obj_button", "qlik_sense_clear_button", "qlik_sense_toolbar_button" );
+		 array_push( $buttons, "qlik-sense-menu-button" );
 		 return $buttons;
 	}
 
