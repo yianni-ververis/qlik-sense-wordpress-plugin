@@ -2,7 +2,7 @@
   tinymce.create('tinymce.plugins.qlik_sense_buttons', {
     init : function(ed, url) {
       ed.addButton('qlik_sense_obj_button', {
-        title : 'Qlik Sense Object',
+        title : 'Insert Qlik Sense Object',
         image : url+'/qlik-sense-obj.png',
         onclick : function() {
 					var selected = tinyMCE.activeEditor.selection.getContent( {format : "text"} );
@@ -14,7 +14,7 @@
          }
       });
 			ed.addButton('qlik_sense_clear_button', {
-				title : 'Qlik Sense Clear Selections',
+				title : 'Insert Qlik Sense Clear Selections',
 				image : url+'/qlik-sense-clear.png',
 				onclick : function() {
 					var selected = tinyMCE.activeEditor.selection.getContent( {format : "text"} );
@@ -23,7 +23,7 @@
 				 }
 			});
 			ed.addButton('qlik_sense_toolbar_button', {
-				title : 'Qlik Sense Selections Toolbar',
+				title : 'Insert Qlik Sense Selections Toolbar',
 				image : url+'/qlik-sense-toolbar.png',
 				onclick : function() {
 					var selected = tinyMCE.activeEditor.selection.getContent( {format : "text"} );
