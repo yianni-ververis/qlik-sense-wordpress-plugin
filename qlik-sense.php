@@ -153,7 +153,7 @@
 	}
 	add_shortcode( 'qlik-sense-selection-toolbar', 'qlik_sense_selection_toolbar_func' );
 
-	// Add buttons to the Wordpress text editor for easy addition of shortcode
+	// Add buttons to the Wordpress text editor for easy addition of shortcodes
 	//  qlik sense object
 	function qlik_sense_obj_button_script() {
 			if(wp_script_is("quicktags")) {
@@ -251,5 +251,28 @@
 			}
 	}
 	add_action("admin_print_footer_scripts", "qlik_sense_toolbar_button_script");
+	
+	// Add the buttons to the TinyMCE so that the shortcodes can be added via the visual page/post editor
+	function register_qlik_sense_buttons( $buttons ) {
+		 array_push( $buttons, "qlik_sense_obj_button", "qlik_sense_clear_button", "qlik_sense_toolbar_button" );
+		 return $buttons;
+	}
+
+	function add_qlik_sense_plugin( $plugin_array ) {
+		 $plugin_array['qlik_sense_buttons'] = plugin_dir_url(__FILE__) . 'js/qlik-sense-shortcode-buttons.js';
+		 return $plugin_array;
+	}
+
+	function qlik_sense_buttons() {
+		 if ( ! current_user_can('edit_posts') && ! current_user_can('edit_pages') ) {
+				return;
+		 }
+
+		 if ( get_user_option('rich_editing') == 'true' ) {
+				add_filter( 'mce_external_plugins', 'add_qlik_sense_plugin' );
+				add_filter( 'mce_buttons', 'register_qlik_sense_buttons' );
+		 }
+	}
+	add_action('init', 'qlik_sense_buttons');
 	
 ?>
