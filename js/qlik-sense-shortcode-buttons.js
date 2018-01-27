@@ -3,6 +3,7 @@
     init : function(ed, url) {
 			ed.addButton('qlik-sense-menu-button', {
 				type: 'menubutton',
+				title : 'Insert Qlik Sense...',
 				text: 'Sense',
 				icon: true,
 				image : url+'/qlik.png',
