@@ -52,7 +52,7 @@ Parameters are as follows:
 
 This shortcode allows you to ebmed a Clear Selections button.
 ```
-"[qlik-sense-object-clear-selections title="Clear Selections"]"
+[qlik-sense-object-clear-selections title="Clear Selections"]
 ```
 Parameters are as follows:
 * title="": Defines the text to be displayed on the button
