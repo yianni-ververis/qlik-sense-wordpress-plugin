@@ -49,7 +49,7 @@
         author : 'Yianni Ververis',
         authorurl : 'yianni.ververis@qlik.com',
         infourl : 'https://github.com/yianni-ververis/qlik-sense-wordpress-plugin',
-        version : "1.2.3"
+        version : "1.3.0	"
       };
     }
   });
