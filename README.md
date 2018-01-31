@@ -14,34 +14,24 @@ This is a simple plugin to connect to your Qlik Sense server and create a mashup
 It is strongly advised to install the plugin from the WordPress plugins manager to receive notifications of future updates. This can be done as follows:
 
 1. Login to your WordPress Admin Portal.
-
-2. On the left hand navigation panel, select "Plugins". 
-
-3. Towards the top of the plugins list, click the "Add New" button. 
-
-4. In the search box towards the right hand side, type "Qlik" and hit enter to search.
+1. On the left hand navigation panel, select "Plugins". 
+1. Towards the top of the plugins list, click the "Add New" button. 
+1. In the search box towards the right hand side, type "Qlik" and hit enter to search.
 ![Qlik Sense Plugin Search](/assets/Plugin-search.png?raw=true "Qlik Sense Plugin Search")
-
-5. The Qlik Sense plugin is currently one of only two results returned. Click the "Install Now" button next to it.
+1. The Qlik Sense plugin is currently one of only two results returned. Click the "Install Now" button next to it.
 ![Qlik Sense Plugin Install](/assets/Plugin-install.png?raw=true "Qlik Sense Plugin Install")
-
-6. WordPress will then download and install the plugin for you. Once complete, "Install Now" button will change to "Activate". Click the "Activate" button to complete the installation.
-
-7. The plugin is now installed and ready to Configure.
+1. WordPress will then download and install the plugin for you. Once complete, "Install Now" button will change to "Activate". Click the "Activate" button to complete the installation.
+1. The plugin is now installed and ready to Configure.
 
 ### How to Configure ###
 
 Before the plugin can be used, it must be configured as follows:
 
 1. Login to your WordPress Admin Portal.
-
-2. On the left hand navigation panel, select "Qlik Sense". 
-
-3. Enter the relevant Qlik Sense server URL, Virtual Proxy, Port and App ID(s) to connect to your Qlik Sense server:
+1. On the left hand navigation panel, select "Qlik Sense". 
+1. Enter the relevant Qlik Sense server URL, Virtual Proxy, Port and App ID(s) to connect to your Qlik Sense server:
 ![Qlik Sense - Settings](/assets/Settings-server.png?raw=true "Qlik Sense - Settings")
-
-
-4. If you are using a local install of Qlik Sense Desktop instead, your settings should appear as follows:
+1. If you are using a local install of Qlik Sense Desktop instead, your settings should appear as follows:
 ![Qlik Sense - Settings](/assets/Settings-local.png?raw=true "Qlik Sense - Settings")
 
 
@@ -63,12 +53,12 @@ Parameters are as follows:
 * qvid="": Is the object id as found in the "dev-hub/single-configurator" or the Qlik Explorer for Developers
 * height="": The height of the visualization in pixels.
 * nointeraction="true" (optional): Add this if you want to disable interactions. If you want the objects to have interaction, you can just omit this.
-* app2="true" (optional): 
+* app2="true" (optional): Add this to get the objects from the app defined as app 2 in the plugin settings.
 * appid="" (optional): The variable qs_appid is added to store the value from the custom field appid. The custom field is used to be able to use a separate app for each page rather than the apps defined in the plugin config.
  
 #### Qlik Sense Clear Selections Button ####
 
-This shortcode allows you to ebmed a Clear Selections button.
+This shortcode allows you to embed a Clear Selections button.
 ```
 [qlik-sense-object-clear-selections title="Clear Selections"]
 ```
@@ -102,7 +92,7 @@ If you save and view the page, it should look something like this. Notice that i
 - You may experience issues if any other plugin is using requirejs.
 
 ### Examples of use ###
-* If you are using it, please send me an email to add your mashup here (yianni.ververis@qlik.com)
+If you are using it, please send me an email to add your mashup here (yianni.ververis@qlik.com)
 
 ### Changelog ###
 
