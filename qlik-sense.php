@@ -69,7 +69,7 @@
 	
 	add_action('admin_menu', 'qlik_sense_plugin_menu');
 	function qlik_sense_plugin_menu() {
-		add_menu_page('Qlik Sense Plugin Settings', 'Qlik Sense', 'administrator', 'qlik_sense_plugin_settings', 'qlik_sense_plugin_settings_page', 'dashicons-admin-generic');
+		add_menu_page('Qlik Sense Plugin Settings', 'Qlik Sense', 'administrator', 'qlik_sense_plugin_settings', 'qlik_sense_plugin_settings_page', plugin_dir_url( __FILE__ ) . 'js/qlik.png', null );
 	}
 	
 	// Create the options to be saved in the Database
