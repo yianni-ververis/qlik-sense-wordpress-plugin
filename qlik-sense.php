@@ -33,9 +33,9 @@
 		wp_register_style( 'qlik-sense-styles', $url );
     }
 
-	add_action( 'wp_enqueue_scripts', 'qlik_sense_enqueued_assets', 20 );
 	// Get the Requirejs from Qlik Sense
-    function qlik_sense_enqueued_assets() {		
+	add_action( 'wp_enqueue_scripts', 'qlik_sense_enqueued_assets', 20 );
+	function qlik_sense_enqueued_assets() {		
 		if( ! wp_script_is( 'qlik-sense-require', 'enqueued' ) ) {
 			$qs = array(
 				"http"		=> (esc_attr( get_option('qs_secure') ) ) ? 'https' : 'http' , 
@@ -81,12 +81,11 @@
 		register_setting( 'qlik_sense-plugin-settings-group', 'qs_id2' );
 		register_setting( 'qlik_sense-plugin-settings-group', 'qs_port' );
 		register_setting( 'qlik_sense-plugin-settings-group', 'qs_secure' );
-		register_setting( 'qlik_sense-plugin-settings-group', 'qs_id2' );
 	}
 
 	// Create the Admin Setting Page
 	function qlik_sense_plugin_settings_page() {
-?>
+	?>
 		<div class="wrap">
 			<h2>Qlik Sense Plugin Settings</h2>
 			<form method="post" action="options.php">
@@ -126,7 +125,7 @@
 				<div style="border-top:1px solid #ccc;padding-top:35px;"><a href="https://www.qlik.com/us/"><img src="<?php echo QLIK_SENSE_PLUGIN_PLUGIN_DIR . "/QlikLogo-RGB.png"?>" width="200"></a></div>
 			</form>
 		</div>
-<?php
+	<?php
 	}
 
 	// Create the Html Snippet for use inside the posts/pages
