@@ -85,7 +85,7 @@
 
 	// Create the Admin Setting Page
 	function qlik_sense_plugin_settings_page() {
-	?>
+		?>
 		<div class="wrap">
 			<h2>Qlik Sense Plugin Settings</h2>
 			<form method="post" action="options.php">
@@ -125,7 +125,7 @@
 				<div style="border-top:1px solid #ccc;padding-top:35px;"><a href="https://www.qlik.com/us/"><img src="<?php echo QLIK_SENSE_PLUGIN_PLUGIN_DIR . "/QlikLogo-RGB.png"?>" width="200"></a></div>
 			</form>
 		</div>
-	<?php
+		<?php
 	}
 
 	// Create the Html Snippet for use inside the posts/pages
@@ -168,99 +168,99 @@
 	// Add buttons to the Wordpress text editor for easy addition of shortcodes
 	//  qlik sense object
 	function qlik_sense_obj_button_script() {
-			if(wp_script_is("quicktags")) {
-					?>
-							<script type="text/javascript">
-									// this function is used to retrieve the selected text from the text editor. 
-									// although this shortcode doesn't wrap around text, we need this to make sure we don't accidentally replace any selected text when inserting the shortcode.
-									function getSel()
-									{
-											var txtarea = document.getElementById("content");
-											var start = txtarea.selectionStart;
-											var finish = txtarea.selectionEnd;
-											return txtarea.value.substring(start, finish);
-									}
+		if(wp_script_is("quicktags")) {
+			?>
+			<script type="text/javascript">
+				// this function is used to retrieve the selected text from the text editor. 
+				// although this shortcode doesn't wrap around text, we need this to make sure we don't accidentally replace any selected text when inserting the shortcode.
+				function getSel()
+				{
+					var txtarea = document.getElementById("content");
+					var start = txtarea.selectionStart;
+					var finish = txtarea.selectionEnd;
+					return txtarea.value.substring(start, finish);
+				}
 
-									QTags.addButton( 
-											"qlik_sense_obj_shortcode", 
-											"Qlik Sense Object", 
-											callback
-									);
+				QTags.addButton( 
+					"qlik_sense_obj_shortcode", 
+					"Qlik Sense Object", 
+					callback
+				);
 
-									function callback()
-									{
-											var selected_text = getSel();
-											var id = prompt("Unique Div ID", "page1-obj1");
-											var qvid = prompt("Sense Object ID", "");
-											QTags.insertContent("[qlik-sense-object id=\”" + id + "\″ qvid=\""+ qvid + "\" height=\"400\"]" +  selected_text);
-									}
-							</script>
-					<?php
-			}
+				function callback()
+				{
+					var selected_text = getSel();
+					var id = prompt("Unique Div ID", "page1-obj1");
+					var qvid = prompt("Sense Object ID", "");
+					QTags.insertContent("[qlik-sense-object id=\”" + id + "\″ qvid=\""+ qvid + "\" height=\"400\"]" +  selected_text);
+				}
+			</script>
+			<?php
+		}
 	}
 	add_action("admin_print_footer_scripts", "qlik_sense_obj_button_script");
 	
 	//  qlik sense clear selections
 	function qlik_sense_clear_button_script() {
-			if(wp_script_is("quicktags")) {
-					?>
-							<script type="text/javascript">
-									// this function is used to retrieve the selected text from the text editor. 
-									// although this shortcode doesn't wrap around text, we need this to make sure we don't accidentally replace any selected text when inserting the shortcode.
-									function getSel()
-									{
-											var txtarea = document.getElementById("content");
-											var start = txtarea.selectionStart;
-											var finish = txtarea.selectionEnd;
-											return txtarea.value.substring(start, finish);
-									}
+		if(wp_script_is("quicktags")) {
+			?>
+			<script type="text/javascript">
+				// this function is used to retrieve the selected text from the text editor. 
+				// although this shortcode doesn't wrap around text, we need this to make sure we don't accidentally replace any selected text when inserting the shortcode.
+				function getSel()
+				{
+					var txtarea = document.getElementById("content");
+					var start = txtarea.selectionStart;
+					var finish = txtarea.selectionEnd;
+					return txtarea.value.substring(start, finish);
+				}
 
-									QTags.addButton( 
-											"qlik_sense_clear_shortcode", 
-											"Qlik Sense Clear", 
-											callback
-									);
+				QTags.addButton( 
+					"qlik_sense_clear_shortcode", 
+					"Qlik Sense Clear", 
+					callback
+				);
 
-									function callback()
-									{
-											var selected_text = getSel();
-											QTags.insertContent("[qlik-sense-object-clear-selections title=\"Clear Selections\"]" +  selected_text);
-									}
-							</script>
-					<?php
-			}
+				function callback()
+				{
+					var selected_text = getSel();
+					QTags.insertContent("[qlik-sense-object-clear-selections title=\"Clear Selections\"]" +  selected_text);
+				}
+			</script>
+			<?php
+		}
 	}
 	add_action("admin_print_footer_scripts", "qlik_sense_clear_button_script");
 	
 	//  qlik sense selections toolbar
 	function qlik_sense_toolbar_button_script() {
-			if(wp_script_is("quicktags")) {
-					?>
-							<script type="text/javascript">
-									// this function is used to retrieve the selected text from the text editor. 
-									// although this shortcode doesn't wrap around text, we need this to make sure we don't accidentally replace any selected text when inserting the shortcode.
-									function getSel()
-									{
-											var txtarea = document.getElementById("content");
-											var start = txtarea.selectionStart;
-											var finish = txtarea.selectionEnd;
-											return txtarea.value.substring(start, finish);
-									}
+		if(wp_script_is("quicktags")) {
+			?>
+			<script type="text/javascript">
+				// this function is used to retrieve the selected text from the text editor. 
+				// although this shortcode doesn't wrap around text, we need this to make sure we don't accidentally replace any selected text when inserting the shortcode.
+				function getSel()
+				{
+					var txtarea = document.getElementById("content");
+					var start = txtarea.selectionStart;
+					var finish = txtarea.selectionEnd;
+					return txtarea.value.substring(start, finish);
+				}
 
-									QTags.addButton( 
-											"qlik_sense_toolbar_shortcode", 
-											"Qlik Sense Toolbar", 
-											callback
-									);
+				QTags.addButton( 
+					"qlik_sense_toolbar_shortcode", 
+					"Qlik Sense Toolbar", 
+					callback
+				);
 
-									function callback()
-									{
-											var selected_text = getSel();
-											QTags.insertContent("[qlik-sense-selection-toolbar]" +  selected_text);
-									}
-							</script>
-					<?php
-			}
+				function callback()
+				{
+					var selected_text = getSel();
+					QTags.insertContent("[qlik-sense-selection-toolbar]" +  selected_text);
+				}
+			</script>
+			<?php
+		}
 	}
 	add_action("admin_print_footer_scripts", "qlik_sense_toolbar_button_script");
 	
@@ -287,4 +287,14 @@
 	}
 	add_action('init', 'qlik_sense_buttons');
 	
+	// Uninstall the settings when the plugin is uninstalled
+	function qlik_sense_uninstall() {
+		unregister_setting( 'qlik_sense-plugin-settings-group', 'qs_host' );
+		unregister_setting( 'qlik_sense-plugin-settings-group', 'qs_prefix' );
+		unregister_setting( 'qlik_sense-plugin-settings-group', 'qs_id' );
+		unregister_setting( 'qlik_sense-plugin-settings-group', 'qs_id2' );
+		unregister_setting( 'qlik_sense-plugin-settings-group', 'qs_port' );
+		unregister_setting( 'qlik_sense-plugin-settings-group', 'qs_secure' );
+	}
+	register_uninstall_hook(  __FILE__, 'qlik_sense_uninstall' );
 ?>
