@@ -17,7 +17,9 @@
 						var id = prompt("Unique Div ID", "page1-obj1");
 						var qvid = prompt("Sense Object ID", "");
 								 
-						ed.execCommand('mceInsertContent', false, '[qlik-sense-object id="'+id+'" qvid="'+qvid+'" height="400"]' + selected);
+						if (id && qvid) {
+							ed.execCommand('mceInsertContent', false, '[qlik-sense-object id="'+id+'" qvid="'+qvid+'" height="400"]' + selected);
+						}
 					}
 				}, {
 					text: 'Insert Clear Selections',

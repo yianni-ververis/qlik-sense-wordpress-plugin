@@ -192,7 +192,9 @@
 					var selected_text = getSel();
 					var id = prompt("Unique Div ID", "page1-obj1");
 					var qvid = prompt("Sense Object ID", "");
-					QTags.insertContent("[qlik-sense-object id=\”" + id + "\″ qvid=\""+ qvid + "\" height=\"400\"]" +  selected_text);
+					if (id && qvid) {
+						QTags.insertContent("[qlik-sense-object id=\”" + id + "\″ qvid=\""+ qvid + "\" height=\"400\"]" +  selected_text);
+					}
 				}
 			</script>
 			<?php
