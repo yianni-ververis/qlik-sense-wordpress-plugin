@@ -31,7 +31,7 @@
 						ed.execCommand('mceInsertContent', false, '[qlik-sense-object-clear-selections title="Clear Selections"]' + selected);
 					}
 				}, {
-					text: qlikSenseTinyMceLang.insertSelectionsToolbar
+					text: qlikSenseTinyMceLang.insertSelectionsToolbar,
 					icon: true,
 					image : url+'/qlik-sense-toolbar.png',
 					onclick: function() {
