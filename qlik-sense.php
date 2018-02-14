@@ -105,7 +105,7 @@
 						<td><input type="text" name="qs_host" size="50" value="<?php echo esc_attr( get_option('qs_host') ); ?>" /></td>
 					</tr>
 					<tr valign="top">
-						<th scope="row"<?php esc_html_e('Virtual Proxy (Prefix)', 'qlik-sense'); ?>:</th>
+						<th scope="row"><?php esc_html_e('Virtual Proxy (Prefix)', 'qlik-sense'); ?>:</th>
 						<td><input type="text" name="qs_prefix" size="5" value="<?php echo esc_attr( get_option('qs_prefix') ); ?>" /></td>
 					</tr>	
 					<tr valign="top">
