@@ -1,0 +1,91 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-14 14:43+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: qlik-sense.php:120
+msgid "App ID"
+msgstr ""
+
+#: qlik-sense.php:124
+msgid "App2 ID"
+msgstr ""
+
+#: qlik-sense.php:104
+msgid "Host"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://github.com/yianni-ververis/qlik-sense-wordpress-plugin"
+msgstr ""
+
+#: qlik-sense.php:314
+msgid "Insert Clear Selections"
+msgstr ""
+
+#: qlik-sense.php:311
+msgid "Insert Object"
+msgstr ""
+
+#: qlik-sense.php:310
+msgid "Insert Qlik Sense..."
+msgstr ""
+
+#: qlik-sense.php:315
+msgid "Insert Selections Toolbar"
+msgstr ""
+
+#: qlik-sense.php:116
+msgid "Is it over Https?"
+msgstr ""
+
+#: qlik-sense.php:112
+msgid "Port"
+msgstr ""
+
+#. Name of the plugin
+msgid "Qlik Sense"
+msgstr ""
+
+#: qlik-sense.php:230
+msgid "Qlik Sense Clear"
+msgstr ""
+
+#: qlik-sense.php:194
+msgid "Qlik Sense Object"
+msgstr ""
+
+#: qlik-sense.php:80 qlik-sense.php:98
+msgid "Qlik Sense Plugin Settings"
+msgstr ""
+
+#: qlik-sense.php:262
+msgid "Qlik Sense Toolbar"
+msgstr ""
+
+#: qlik-sense.php:202 qlik-sense.php:313
+msgid "Sense Object ID"
+msgstr ""
+
+#: qlik-sense.php:201 qlik-sense.php:312
+msgid "Unique Div ID"
+msgstr ""
+
+#: qlik-sense.php:108
+msgid "Virtual Proxy (Prefix)"
+msgstr ""
+
+#. Author of the plugin
+msgid "yianni.ververis@qlik.com"
+msgstr ""

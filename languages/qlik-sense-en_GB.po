@@ -1,0 +1,90 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Qlik Sense\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-14 14:43+0000\n"
+"PO-Revision-Date: 2018-02-14 14:47+0000\n"
+"Last-Translator: WPTestAdmin <matt.fryer@datoniq.com>\n"
+"Language-Team: English (UK)\n"
+"Language: en_GB\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: qlik-sense.php:120
+msgid "App ID"
+msgstr "App ID"
+
+#: qlik-sense.php:124
+msgid "App2 ID"
+msgstr "App2 ID"
+
+#: qlik-sense.php:104
+msgid "Host"
+msgstr "Host"
+
+#. URI of the plugin
+msgid "https://github.com/yianni-ververis/qlik-sense-wordpress-plugin"
+msgstr "https://github.com/yianni-ververis/qlik-sense-wordpress-plugin"
+
+#: qlik-sense.php:314
+msgid "Insert Clear Selections"
+msgstr "Insert Clear Selections"
+
+#: qlik-sense.php:311
+msgid "Insert Object"
+msgstr "Insert Object"
+
+#: qlik-sense.php:310
+msgid "Insert Qlik Sense..."
+msgstr "Insert Qlik Sense..."
+
+#: qlik-sense.php:315
+msgid "Insert Selections Toolbar"
+msgstr "Insert Selections Toolbar"
+
+#: qlik-sense.php:116
+msgid "Is it over Https?"
+msgstr "Is it over Https?"
+
+#: qlik-sense.php:112
+msgid "Port"
+msgstr "Port"
+
+#. Name of the plugin
+msgid "Qlik Sense"
+msgstr "Qlik Sense"
+
+#: qlik-sense.php:230
+msgid "Qlik Sense Clear"
+msgstr "Qlik Sense Clear"
+
+#: qlik-sense.php:194
+msgid "Qlik Sense Object"
+msgstr "Qlik Sense Object"
+
+#: qlik-sense.php:80 qlik-sense.php:98
+msgid "Qlik Sense Plugin Settings"
+msgstr "Qlik Sense Plugin Settings"
+
+#: qlik-sense.php:262
+msgid "Qlik Sense Toolbar"
+msgstr "Qlik Sense Toolbar"
+
+#: qlik-sense.php:202 qlik-sense.php:313
+msgid "Sense Object ID"
+msgstr "Sense Object ID"
+
+#: qlik-sense.php:201 qlik-sense.php:312
+msgid "Unique Div ID"
+msgstr "Unique Div ID"
+
+#: qlik-sense.php:108
+msgid "Virtual Proxy (Prefix)"
+msgstr "Virtual Proxy (Prefix)"
+
+#. Author of the plugin
+msgid "yianni.ververis@qlik.com"
+msgstr "yianni.ververis@qlik.com"
