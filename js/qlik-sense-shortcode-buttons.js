@@ -3,26 +3,26 @@
     init : function(ed, url) {
 			ed.addButton('qlik-sense-menu-button', {
 				type: 'menubutton',
-				title : 'Insert Qlik Sense...',
+				title : qlikSenseTinyMceLang.insertSense,
 				text: 'Sense',
 				icon: true,
 				image : url+'/qlik.png',
 				menu: [{
-					text: 'Insert Object',
+					text: qlikSenseTinyMceLang.insertObject,
 					icon: true,
 					image : url+'/qlik-sense-obj.png',
 					onclick: function() {
 						var selected = tinyMCE.activeEditor.selection.getContent( {format : "text"} );
 									
-						var id = prompt("Unique Div ID", "page1-obj1");
-						var qvid = prompt("Sense Object ID", "");
+						var id = prompt(qlikSenseTinyMceLang.uniqueDivId, "page1-obj1");
+						var qvid = prompt(qlikSenseTinyMceLang.senseObjId, "");
 								 
 						if (id && qvid) {
 							ed.execCommand('mceInsertContent', false, '[qlik-sense-object id="'+id+'" qvid="'+qvid+'" height="400"]' + selected);
 						}
 					}
 				}, {
-					text: 'Insert Clear Selections',
+					text: qlikSenseTinyMceLang.insertClearSelections,
 					icon: true,
 					image : url+'/qlik-sense-clear.png',
 					onclick: function() {
@@ -31,7 +31,7 @@
 						ed.execCommand('mceInsertContent', false, '[qlik-sense-object-clear-selections title="Clear Selections"]' + selected);
 					}
 				}, {
-					text: 'Insert Selections Toolbar',
+					text: qlikSenseTinyMceLang.insertSelectionsToolbar
 					icon: true,
 					image : url+'/qlik-sense-toolbar.png',
 					onclick: function() {

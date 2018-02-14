@@ -12,12 +12,20 @@
 	Version: 1.3.0
 	Author: yianni.ververis@qlik.com
 	License: MIT
+	Text Domain: qlik-sense
+	Domain Path: /languages
 	*/
 	defined('ABSPATH') or die("No script kiddies please!"); //Block direct access to this php file
 
     define( 'QLIK_SENSE_PLUGIN_VERSION', '1.3.0' );
     define( 'QLIK_SENSE_PLUGIN_MINIMUM_WP_VERSION', '4.0' );
-    define( 'QLIK_SENSE_PLUGIN_PLUGIN_DIR', plugin_dir_url( __FILE__ ) );
+	define( 'QLIK_SENSE_PLUGIN_PLUGIN_DIR', plugin_dir_url( __FILE__ ) );
+	
+	// Define text domain for translations
+	function qlik_sense_load_textdomain() {
+		load_plugin_textdomain( 'qlik-sense', false, basename( dirname( __FILE__ ) ) . '/languages' ); 
+	}
+	add_action( 'plugins_loaded', 'qlik_sense_load_textdomain' );
 
 	// Get the CSS and JS from Sense
     add_action( 'wp_enqueue_scripts', 'qlik_sense_enqueued_styles');
@@ -69,7 +77,7 @@
 	
 	add_action('admin_menu', 'qlik_sense_plugin_menu');
 	function qlik_sense_plugin_menu() {
-		add_menu_page('Qlik Sense Plugin Settings', 'Qlik Sense', 'administrator', 'qlik_sense_plugin_settings', 'qlik_sense_plugin_settings_page', plugin_dir_url( __FILE__ ) . 'js/qlik.png', null );
+		add_menu_page( esc_attr__('Qlik Sense Plugin Settings', 'qlik-sense'), 'Qlik Sense', 'administrator', 'qlik_sense_plugin_settings', 'qlik_sense_plugin_settings_page', plugin_dir_url( __FILE__ ) . 'js/qlik.png', null );
 	}
 	
 	// Create the options to be saved in the Database
@@ -87,33 +95,33 @@
 	function qlik_sense_plugin_settings_page() {
 		?>
 		<div class="wrap">
-			<h2>Qlik Sense Plugin Settings</h2>
+			<h2><?php esc_html__('Qlik Sense Plugin Settings', 'qlik-sense'); ?></h2>
 			<form method="post" action="options.php">
 				<?php settings_fields( 'qlik_sense-plugin-settings-group' ); ?>
 				<?php do_settings_sections( 'qlik_sense-plugin-settings-group' ); ?>
 				<table class="form-table">
 					<tr valign="top">
-						<th scope="row">Host:</th>
+						<th scope="row"><?php esc_html_e('Host', 'qlik-sense'); ?>:</th>
 						<td><input type="text" name="qs_host" size="50" value="<?php echo esc_attr( get_option('qs_host') ); ?>" /></td>
 					</tr>
 					<tr valign="top">
-						<th scope="row">Virtual Proxy (Prefix):</th>
+						<th scope="row"<?php esc_html_e('Virtual Proxy (Prefix)', 'qlik-sense'); ?>>:</th>
 						<td><input type="text" name="qs_prefix" size="5" value="<?php echo esc_attr( get_option('qs_prefix') ); ?>" /></td>
 					</tr>	
 					<tr valign="top">
-						<th scope="row">Port:</th>
+						<th scope="row"><?php esc_html_e('Port', 'qlik-sense'); ?>:</th>
 						<td><input type="text" name="qs_port" size="5" value="<?php echo esc_attr( get_option('qs_port') ); ?>" /></td>
 					</tr>	
 					<tr valign="top">
-						<th scope="row">Is it over Https?</th>
+						<th scope="row"><?php esc_html_e('Is it over Https?', 'qlik-sense'); ?></th>
 						<td><input type="checkbox" name="qs_secure" value="1" <?php checked( esc_attr( get_option('qs_secure') ), 1 ); ?> /></td>
 					</tr>	
 					<tr valign="top">
-						<th scope="row">App ID:</th>
+						<th scope="row"><?php esc_html_e('App ID', 'qlik-sense'); ?>:</th>
 						<td><input type="text" name="qs_id" size="50" value="<?php echo esc_attr( get_option('qs_id') ); ?>" /></td>
 					</tr>					
 					<tr valign="top">
-						<th scope="row">App2 ID:</th>
+						<th scope="row"><?php esc_html_e('App2 ID', 'qlik-sense'); ?>:</th>
 						<td><input type="text" name="qs_id2" size="50" value="<?php echo esc_attr( get_option('qs_id2') ); ?>" /></td>
 					</tr>				
 					<tr valign="top">
@@ -183,15 +191,15 @@
 
 				QTags.addButton( 
 					"qlik_sense_obj_shortcode", 
-					"Qlik Sense Object", 
+					"<?php esc_html_e('Qlik Sense Object', 'qlik-sense'); ?>", 
 					callback
 				);
 
 				function callback()
 				{
 					var selected_text = getSel();
-					var id = prompt("Unique Div ID", "page1-obj1");
-					var qvid = prompt("Sense Object ID", "");
+					var id = prompt("<?php esc_html_e('Unique Div ID', 'qlik-sense'); ?>", "page1-obj1");
+					var qvid = prompt("<?php esc_html_e('Sense Object ID', 'qlik-sense'); ?>", "");
 					if (id && qvid) {
 						QTags.insertContent("[qlik-sense-object id=\”" + id + "\″ qvid=\""+ qvid + "\" height=\"400\"]" +  selected_text);
 					}
@@ -219,7 +227,7 @@
 
 				QTags.addButton( 
 					"qlik_sense_clear_shortcode", 
-					"Qlik Sense Clear", 
+					"<?php esc_html_e('Qlik Sense Clear', 'qlik-sense'); ?>", 
 					callback
 				);
 
@@ -251,7 +259,7 @@
 
 				QTags.addButton( 
 					"qlik_sense_toolbar_shortcode", 
-					"Qlik Sense Toolbar", 
+					"<?php esc_html_e('Qlik Sense Toolbar', 'qlik-sense'); ?>", 
 					callback
 				);
 
@@ -288,6 +296,29 @@
 		 }
 	}
 	add_action('init', 'qlik_sense_buttons');
+
+	// Handly tinyMCE language translations
+	function qlik_sense_tinymce_lang() {
+
+		global $current_screen;
+		$type = $current_screen->post_type;
+
+		if (is_admin() && $type == 'post' || $type == 'page') {
+			?>
+			<script type="text/javascript">
+				var qlikSenseTinyMceLang = {
+					insertSense: "<?php esc_html_e('Insert Qlik Sense...', 'qlik-sense'); ?>", 
+					insertObject: "<?php esc_html_e('Insert Object', 'qlik-sense'); ?>", 
+					uniqueDivId: "<?php esc_html_e('Unique Div ID', 'qlik-sense'); ?>", 
+					senseObjId: "<?php esc_html_e('Sense Object ID', 'qlik-sense'); ?>", 
+					insertClearSelections: "<?php esc_html_e('Insert Clear Selections', 'qlik-sense'); ?>", 
+					insertSelectionsToolbar: "<?php esc_html_e('Insert Selections Toolbar', 'qlik-sense'); ?>", 
+				};
+			</script>
+			<?php
+		}
+	}
+	add_action('admin_head','qlik_sense_tinymce_lang');
 	
 	// Uninstall the settings when the plugin is uninstalled
 	function qlik_sense_uninstall() {
