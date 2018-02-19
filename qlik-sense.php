@@ -303,7 +303,7 @@
 		global $current_screen;
 		$type = $current_screen->post_type;
 
-		if (is_admin() && $type == 'post' || $type == 'page') {
+		if (is_admin()) {
 			?>
 			<script type="text/javascript">
 				var qlikSenseTinyMceLang = {
