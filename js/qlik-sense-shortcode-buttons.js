@@ -3,26 +3,26 @@
     init : function(ed, url) {
 			ed.addButton('qlik-sense-menu-button', {
 				type: 'menubutton',
-				title : qlikSenseTinyMceLang.insertSense,
+				title : ed.getLang('qlik_sense_buttons.insertSense'),
 				text: 'Sense',
 				icon: true,
 				image : url+'/qlik.png',
 				menu: [{
-					text: qlikSenseTinyMceLang.insertObject,
+					text: ed.getLang('qlik_sense_buttons.insertObject'),
 					icon: true,
 					image : url+'/qlik-sense-obj.png',
 					onclick: function() {
 						var selected = tinyMCE.activeEditor.selection.getContent( {format : "text"} );
 									
-						var id = prompt(qlikSenseTinyMceLang.uniqueDivId, "page1-obj1");
-						var qvid = prompt(qlikSenseTinyMceLang.senseObjId, "");
+						var id = prompt(ed.getLang('qlik_sense_buttons.uniqueDivId'), "page1-obj1");
+						var qvid = prompt(ed.getLang('qlik_sense_buttons.senseObjId'), "");
 								 
 						if (id && qvid) {
 							ed.execCommand('mceInsertContent', false, '[qlik-sense-object id="'+id+'" qvid="'+qvid+'" height="400"]' + selected);
 						}
 					}
 				}, {
-					text: qlikSenseTinyMceLang.insertClearSelections,
+					text: ed.getLang('qlik_sense_buttons.insertClearSelections'),
 					icon: true,
 					image : url+'/qlik-sense-clear.png',
 					onclick: function() {
@@ -31,7 +31,7 @@
 						ed.execCommand('mceInsertContent', false, '[qlik-sense-object-clear-selections title="Clear Selections"]' + selected);
 					}
 				}, {
-					text: qlikSenseTinyMceLang.insertSelectionsToolbar,
+					text: ed.getLang('qlik_sense_buttons.insertSelectionsToolbar'),
 					icon: true,
 					image : url+'/qlik-sense-toolbar.png',
 					onclick: function() {

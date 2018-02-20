@@ -298,27 +298,12 @@
 	add_action('init', 'qlik_sense_buttons');
 
 	// Handly tinyMCE language translations
-	function qlik_sense_tinymce_lang() {
-
-		global $current_screen;
-		$type = $current_screen->post_type;
-
-		if (is_admin()) {
-			?>
-			<script type="text/javascript">
-				var qlikSenseTinyMceLang = {
-					insertSense: "<?php esc_html_e('Insert Qlik Sense...', 'qlik-sense'); ?>", 
-					insertObject: "<?php esc_html_e('Insert Object', 'qlik-sense'); ?>", 
-					uniqueDivId: "<?php esc_html_e('Unique Div ID', 'qlik-sense'); ?>", 
-					senseObjId: "<?php esc_html_e('Sense Object ID', 'qlik-sense'); ?>", 
-					insertClearSelections: "<?php esc_html_e('Insert Clear Selections', 'qlik-sense'); ?>", 
-					insertSelectionsToolbar: "<?php esc_html_e('Insert Selections Toolbar', 'qlik-sense'); ?>", 
-				};
-			</script>
-			<?php
-		}
+	function qlik_sense_tinymce_lang($locales) {
+		$locales['qlik_sense_buttons'] = plugin_dir_path(__FILE__) . 'tinymce-translations.php';
+		return $locales;
 	}
-	add_action('admin_head','qlik_sense_tinymce_lang');
+	 
+	add_filter( 'mce_external_languages', 'qlik_sense_tinymce_lang');
 	
 	// Uninstall the settings when the plugin is uninstalled
 	function qlik_sense_uninstall() {
